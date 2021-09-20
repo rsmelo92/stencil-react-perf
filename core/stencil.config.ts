@@ -13,5 +13,8 @@ export const config: Config = {
       type: 'dist',
       esmLoaderPath: '../loader',
     },
+    {
+      type: 'dist-hydrate-script',
+    },
   ],
 };

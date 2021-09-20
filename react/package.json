@@ -5,9 +5,10 @@
   "license": "MIT",
   "scripts": {
     "build": "yarn clean && yarn compile",
-    "compile": "yarn tsc",
     "clean": "rm -rf dist",
-    "tsc": "tsc -p ."
+    "compile": "yarn tsc:cjs",
+    "tsc:cjs": "tsc --module commonjs",
+    "server": "node server"
   },
   "dependencies": {
     "@types/express": "^4.17.13",
