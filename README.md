@@ -12,6 +12,24 @@ This test uses this [code](react/src/ssrRender.ts)
 
 ```
 
+## How to run
+
+Just navigate to react folder
+
+```
+cd react
+```
+
+And run the sever
+
+```
+yarn server
+```
+
+Then, to take a look at one component render access http://localhost:1337
+
+To take a look at a thousand renders access http://localhost:1337/thousand
+
 ## Benchmark
 
 When we `renderToString` just one component the React and stencil render methods do not diverge too much
