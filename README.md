@@ -31,12 +31,16 @@ Then, to take a look at one component render access http://localhost:1337
 To take a look at a thousand renders access http://localhost:1337/thousand
 
 ## Benchmark
+```
+firstRender = React render
+secondRender = Stencil render
+```
 
-When we `renderToString` just one component the React and stencil render methods do not diverge too much
+When we `renderToString` just one component the React(firstRender) and stencil(secondRender) render methods do not diverge too much
 
 <img src="https://user-images.githubusercontent.com/16295402/134042873-500db7e9-31d7-411e-a0f3-11bb0ffcc5c9.png" width="60%" />
 
-But when rendering 1000 components (for illustration purposes), the React and stencil render methods have a considerable performance difference
+But when rendering 1000 components (for illustration purposes), the React(firstRender) and stencil(secondRender) render methods have a considerable performance difference
 
 <img src="https://user-images.githubusercontent.com/16295402/134042891-150b75f0-7cda-460d-9885-3e1502f520bf.png" width="60%" />
 
