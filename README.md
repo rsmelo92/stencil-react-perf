@@ -31,10 +31,7 @@ Then, to take a look at one component render access http://localhost:1337
 To take a look at a thousand renders access http://localhost:1337/thousand
 
 ## Benchmark
-```
-firstRender = React render
-secondRender = Stencil render
-```
+
 
 When we `renderToString` just one component the React(firstRender) and stencil(secondRender) render methods do not diverge too much
 
