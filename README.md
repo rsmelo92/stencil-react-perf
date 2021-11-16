@@ -5,13 +5,21 @@ This Repo tries to show how the performance of ssr is degraded when using React 
 TL:DR
 This test uses this [code](react/src/ssrRender.ts)
 
-```
+```js
   const rawHtml = ReactDOMServer.renderToString(jsx); // Render SSR React
   const { html } = await hydrate.renderToString(rawHtml); // Render SSR stencil from React output
   return html
 ```
 
-## How to run
+## How to build
+
+On root to build whole project run
+
+```
+make build
+```
+
+## How to run server
 
 Just navigate to react folder
 
@@ -41,5 +49,3 @@ But when rendering 1000 components (for illustration purposes), the React(firstR
 <img src="https://user-images.githubusercontent.com/16295402/134042891-150b75f0-7cda-460d-9885-3e1502f520bf.png" width="60%" />
 
 This is also true when rendering a React page that uses some stencil generated components.
-
-
