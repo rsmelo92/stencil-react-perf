@@ -6,13 +6,14 @@ export const config: Config = {
   outputTargets: [
     reactOutputTarget({
       includeImportCustomElements: true,
+      includePolyfills: false,
       includeDefineCustomElements: false,
-      customElementsDir: './dist/components',
       proxiesFile: '../react/src/components.ts',
+      customElementsDir: './dist/components',
     }),
     {
       type: 'dist-custom-elements',
-      // autoDefineCustomElements: true,
+      autoDefineCustomElements: true,
     },
     {
       type: 'dist-hydrate-script',

@@ -27,6 +27,7 @@ function defineCustomElement$1() {
       break;
   } });
 }
+defineCustomElement$1();
 
 const MySecond = MySecond$1;
 const defineCustomElement = defineCustomElement$1;
