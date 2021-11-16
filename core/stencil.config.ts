@@ -5,13 +5,14 @@ export const config: Config = {
   namespace: 'core',
   outputTargets: [
     reactOutputTarget({
+      includeImportCustomElements: true,
+      includeDefineCustomElements: false,
+      customElementsDir: './dist/components',
       proxiesFile: '../react/src/components.ts',
-      includeDefineCustomElements: true,
-      loaderDir: '../../core/loader'
     }),
     {
-      type: 'dist',
-      esmLoaderPath: '../loader',
+      type: 'dist-custom-elements',
+      autoDefineCustomElements: true,
     },
     {
       type: 'dist-hydrate-script',
