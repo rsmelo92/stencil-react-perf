@@ -3,7 +3,7 @@
 Object.defineProperty(exports, '__esModule', { value: true });
 
 /*!
- Stencil Mock Doc v2.8.1 | MIT Licensed | https://stenciljs.com
+ Stencil Mock Doc v2.11.0-0 | MIT Licensed | https://stenciljs.com
  */
 const CONTENT_REF_ID = 'r';
 const ORG_LOCATION_ID = 'o';
@@ -2566,6 +2566,9 @@ class MockAnchorElement extends MockHTMLElement {
   }
   set href(value) {
     this.setAttribute('href', value);
+  }
+  get pathname() {
+    return new URL(this.href).pathname;
   }
 }
 class MockButtonElement extends MockHTMLElement {
@@ -5170,7 +5173,8 @@ const callRender = (e, t, o) => {
    s.attributeChangedCallback = function(e, t, n) {
     plt.jmp((() => {
      const t = o.get(e);
-     this.hasOwnProperty(t) && (n = this[t], delete this[t]), this[t] = (null !== n || "boolean" != typeof this[t]) && n;
+     if (this.hasOwnProperty(t)) n = this[t], delete this[t]; else if (s.hasOwnProperty(t) && "number" == typeof this[t] && this[t] == n) return;
+     this[t] = (null !== n || "boolean" != typeof this[t]) && n;
     }));
    }, e.observedAttributes = n.filter((([e, t]) => 15 & t[0])).map((([e, n]) => {
     const s = n[1] || e;

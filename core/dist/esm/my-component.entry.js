@@ -1,4 +1,4 @@
-import { r as registerInstance, h } from './index-47469cdb.js';
+import { r as registerInstance, h } from './index-79a09c35.js';
 
 function format(first, middle, last) {
   return (first || '') + (middle ? ` ${middle}` : '') + (last ? ` ${last}` : '');
@@ -6,7 +6,7 @@ function format(first, middle, last) {
 
 const myComponentCss = ":host{display:block}";
 
-const MyComponent = class {
+let MyComponent = class {
   constructor(hostRef) {
     registerInstance(this, hostRef);
   }

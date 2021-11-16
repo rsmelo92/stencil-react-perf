@@ -2,7 +2,7 @@
 
 Object.defineProperty(exports, '__esModule', { value: true });
 
-const index = require('./index-52c76fb0.js');
+const index = require('./index-3bda31fc.js');
 
 function format(first, middle, last) {
   return (first || '') + (middle ? ` ${middle}` : '') + (last ? ` ${last}` : '');
@@ -10,7 +10,7 @@ function format(first, middle, last) {
 
 const myComponentCss = ":host{display:block}";
 
-const MyComponent = class {
+let MyComponent = class {
   constructor(hostRef) {
     index.registerInstance(this, hostRef);
   }
