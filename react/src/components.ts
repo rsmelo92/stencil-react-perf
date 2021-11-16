@@ -3,8 +3,8 @@
 /* auto-generated react proxies */
 import { createReactComponent } from './react-component-lib';
 
-import type { JSX } from '../../core/dist/types/components';
+import type { JSX } from '../../core/dist/components';
 
-
+import { MyComponent as MyComponentCmp } from '../../core/dist/components/my-component.js';
 
 export const MyComponent = /*@__PURE__*/createReactComponent<JSX.MyComponent, HTMLMyComponentElement>('my-component', undefined, undefined, MyComponentCmp);

@@ -6,8 +6,7 @@
   "module": "dist/index.js",
   "types": "./dist/types/components.d.ts",
   "files": [
-    "dist/",
-    "loader/"
+    "dist/"
   ],
   "scripts": {
     "build": "yarn clean && stencil build",
