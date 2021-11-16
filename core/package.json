@@ -10,7 +10,8 @@
     "loader/"
   ],
   "scripts": {
-    "build": "stencil build",
+    "build": "yarn clean && stencil build",
+    "clean": "rm -rf dist",
     "start": "stencil build --dev --watch --serve",
     "generate": "stencil generate"
   },
