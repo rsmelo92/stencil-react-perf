@@ -6,10 +6,9 @@ TL:DR
 This test uses this [code](react/src/ssrRender.ts)
 
 ```
-  const rawHtml = ReactDOMServer.renderToString(jsx);
-  const { html } = await hydrate.renderToString(rawHtml);
+  const rawHtml = ReactDOMServer.renderToString(jsx); // Render SSR React
+  const { html } = await hydrate.renderToString(rawHtml); // Render SSR stencil from React output
   return html
-
 ```
 
 ## How to run
