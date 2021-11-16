@@ -49,5 +49,8 @@ app.get('/thousand', async (_, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`Listening on http://localhost:${PORT}`);
+  console.log(`
+    Listening on http://localhost:${PORT}
+    Test performance on http://localhost:${PORT}/thousand
+  `);
 });

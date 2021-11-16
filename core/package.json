@@ -11,8 +11,8 @@
   ],
   "scripts": {
     "build": "yarn clean && stencil build",
-    "start": "stencil build --dev --watch --serve",
     "clean": "rm -rf dist",
+    "start": "stencil build --dev --watch --serve",
     "generate": "stencil generate"
   },
   "dependencies": {

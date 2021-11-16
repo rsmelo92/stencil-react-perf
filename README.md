@@ -5,14 +5,21 @@ This Repo tries to show how the performance of ssr is degraded when using React 
 TL:DR
 This test uses this [code](react/src/ssrRender.ts)
 
-```
-  const rawHtml = ReactDOMServer.renderToString(jsx);
-  const { html } = await hydrate.renderToString(rawHtml);
+```js
+  const rawHtml = ReactDOMServer.renderToString(jsx); // Render SSR React
+  const { html } = await hydrate.renderToString(rawHtml); // Render SSR stencil from React output
   return html
-
 ```
 
-## How to run
+## How to build
+
+On root to build whole project run
+
+```
+make build
+```
+
+## How to run server
 
 Just navigate to react folder
 
@@ -32,14 +39,13 @@ To take a look at a thousand renders access http://localhost:1337/thousand
 
 ## Benchmark
 
-When we `renderToString` just one component the React and stencil render methods do not diverge too much
+
+When we `renderToString` just one component the React(firstRender) and stencil(secondRender) render methods do not diverge too much
 
 <img src="https://user-images.githubusercontent.com/16295402/134042873-500db7e9-31d7-411e-a0f3-11bb0ffcc5c9.png" width="60%" />
 
-But when rendering 1000 components (for illustration purposes), the React and stencil render methods have a considerable performance difference
+But when rendering 1000 components (for illustration purposes), the React(firstRender) and stencil(secondRender) render methods have a considerable performance difference
 
 <img src="https://user-images.githubusercontent.com/16295402/134042891-150b75f0-7cda-460d-9885-3e1502f520bf.png" width="60%" />
 
 This is also true when rendering a React page that uses some stencil generated components.
-
-
