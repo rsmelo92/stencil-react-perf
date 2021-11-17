@@ -1,7 +1,7 @@
 const React = require('react');
 const express = require('express');
-const { MyComponent } = require('../dist')
-const { renderReact } = require('../dist/ssrRender');
+const { MyComponent } = require('../react/dist/index.js');
+const { renderReact } = require('../react/dist/ssrRender.js');
 
 const PORT = 1337;
 const RENDER_TIMES = 1000;
